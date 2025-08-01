@@ -12,9 +12,6 @@ declare global {
       PORT: string;
       NODE_ENV: "production" | "development";
 
-      RESELLER_API_BASE_URL: string;
-      RESELLER_API_KEY: string;
-
       // OXA_PAY
       OXAPAY_API_BASE_URL: string;
       OXAPAY_GENERAL_API_KEY: string;
