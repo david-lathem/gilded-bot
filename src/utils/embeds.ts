@@ -5,7 +5,7 @@ export function buildBaseEmbed({
   guild,
   title,
   description,
-  color = 9590489,
+  color = 15856712,
   fields = [],
 }: BaseEmbedOptions) {
   return (
