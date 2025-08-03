@@ -2,6 +2,9 @@
 
 > ⚡ Generate invoices, accept crypto payments, send payouts, and get real-time webhook updates — all from your Discord server with a modern UI and OxaPay integration.
 
+![invoice noti image](https://github.com/bilal-the-dev/Crypto-OxaPay-Discord-bot-Payout-and-Invoice-/blob/main/invoiceGen.PNG)
+![invoice paid image](https://github.com/bilal-the-dev/Crypto-OxaPay-Discord-bot-Payout-and-Invoice-/blob/main/invoicePay.PNG)
+
 ### ✨ Features
 
 - 🧾 **Invoice Generator**
@@ -21,9 +24,6 @@
 
 - 🧱 **Sleek Embedded UI**
   Clean, minimal embeds designed to show payment info clearly and professionally in Discord.
-
-![invoice noti image](https://github.com/bilal-the-dev/Crypto-OxaPay-Discord-bot-Payout-and-Invoice-/blob/main/invoiceGen.png)
-![invoice paid image](https://github.com/bilal-the-dev/Crypto-OxaPay-Discord-bot-Payout-and-Invoice-/blob/main/invoicePay.png)
 
 ### 🛠️ Tech Stack
 
