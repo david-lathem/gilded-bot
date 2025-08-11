@@ -33,7 +33,7 @@ export default async (interaction: BaseInteraction) => {
       }
 
       if (
-        !command.authorizedRoleOnly &&
+        command.ownerOnly &&
         !process.env.BOT_OWNER_IDS.split(",").includes(interaction.user.id)
       )
         throw new Error("Unauthorized!");
@@ -56,7 +56,7 @@ export default async (interaction: BaseInteraction) => {
       // if (embedChannel?.isSendable()) {
       // await embedChannel.send({ embeds: [embed] });
 
-      await interaction.editReply({ embeds: [embed] });
+      if (embed) await interaction.editReply({ embeds: [embed] });
       // }
     }
 

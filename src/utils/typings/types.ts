@@ -15,17 +15,20 @@ export interface extendedAPICommand
   permissionRequired?: bigint | Array<bigint>;
   guildOnly?: Boolean;
   authorizedRoleOnly?: Boolean;
+  ownerOnly?: Boolean;
   autocomplete?(
     interaction: AutocompleteInteraction
   ): Promise<Array<ApplicationCommandOptionChoiceData | string>>;
   execute(
     interaction: ChatInputCommandInteraction<"cached">
-  ): Promise<EmbedBuilder>;
+  ): Promise<EmbedBuilder | void>;
 }
 
 export interface customRequest extends Request {
   rawBody: Buffer;
 }
+
+export type ConfigFile = Record<string, { owner?: Boolean }>;
 
 export interface BaseCustomFetchOptions {
   url: string;

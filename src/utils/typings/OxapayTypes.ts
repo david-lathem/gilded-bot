@@ -128,8 +128,10 @@ export interface OxaInvoiceStatusResponseData {
   //optional fields occur in API response or webhook NOT both
   track_id: string;
   type: "invoice";
-  amount: number;
-  currency: string;
+  amount: number; // amount put in command for example 20 (by default its USD, so currency will be usd)
+  currency: string; // currency put in command (by default usd)
+  value?: number; // the amount sent by payer in whatever currency, could be btc, eth so 2403857 bnb for 20 btc (20 btc put in command)
+  sent_value?: number;
   status: string;
   mixed_payment?: boolean;
   fee_paid_by_payer: number;

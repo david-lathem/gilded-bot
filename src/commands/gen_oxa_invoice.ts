@@ -5,6 +5,7 @@ import {
   generateOxaInvoiceEmbed,
 } from "../utils/oxaEmbed.js";
 import { sendLogInChannel } from "../utils/logs.js";
+import { OxaGenerateInvoicePayload } from "../utils/typings/OxapayTypes.js";
 
 export default {
   name: "gen_oxa_invoice",
@@ -93,7 +94,7 @@ export default {
     const thanks_message = interaction.options.getString("thanks_message");
     const description = interaction.options.getString("description");
 
-    const payload = {
+    const payload: OxaGenerateInvoicePayload = {
       amount,
       currency,
       lifetime,
@@ -107,6 +108,7 @@ export default {
       thanks_message,
       description,
       sandbox: process.env.NODE_ENV === "development",
+      callback_url: "https://325009d0c886.ngrok-free.app/oxapay/callback",
     };
 
     const res = await generateOxaInvoice(payload);

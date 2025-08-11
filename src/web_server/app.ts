@@ -12,6 +12,7 @@ import {
 import client from "../client.js";
 import { sendLogInChannel } from "../utils/logs.js";
 import { customRequest } from "../utils/typings/types.js";
+import { managePayoutSplit } from "../utils/payoutManagement.js";
 
 const app = express();
 
@@ -66,11 +67,12 @@ async function handleWebhookEvent(
 
     const embed = generateOxaInvoiceStatusEmbed(guild, req.body, true);
 
+    const [channelId, userId] = req.body.order_id.split("-");
+
     await sendLogInChannel({ embeds: [embed] }, process.env.LOGS_CHANNEL_ID);
-    await sendLogInChannel(
-      { embeds: [embed] },
-      req.body.order_id.split("-")[0]
-    );
+    await sendLogInChannel({ embeds: [embed] }, channelId);
+
+    managePayoutSplit(req.body, userId);
   }
 
   if (req.body.type === "payout" && req.body.status === "Confirmed") {
