@@ -21,7 +21,7 @@ export default {
     if (
       optionalUserToCheckFor &&
       optionalUserToCheckFor.id !== interaction.user.id &&
-      !config[interaction.user.id].owner
+      !config[interaction.user.id]?.owner
     )
       throw new Error("Owner only!");
 
