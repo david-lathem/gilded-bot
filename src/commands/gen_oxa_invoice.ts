@@ -108,7 +108,6 @@ export default {
       thanks_message,
       description,
       sandbox: process.env.NODE_ENV === "development",
-      callback_url: "https://325009d0c886.ngrok-free.app/oxapay/callback",
     };
 
     const res = await generateOxaInvoice(payload);
