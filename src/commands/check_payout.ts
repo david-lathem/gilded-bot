@@ -50,7 +50,8 @@ export default {
     });
 
     const description =
-      payoutLines.join("\n") + `\n**📊 Total Due:** $${totalDue}`;
+      `**📊 Total Due:** \`\`\`${totalDue} USD\`\`\`\n` +
+      payoutLines.join("\n");
 
     const embed = buildBaseEmbed({
       guild: interaction.guild,
