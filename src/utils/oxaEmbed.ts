@@ -81,7 +81,7 @@ export function generateOxaPayoutStatsEmbed(
 
   return buildBaseEmbed({
     guild,
-    title: isWebhook ? "🎄 OxaPay Payout Confirmed" : "📊 OxaPay Payout Stats",
+    title: isWebhook ? "🎄 OxaPay Payout Confirmed" : "📊 Payout Stats",
     fields,
   });
 }

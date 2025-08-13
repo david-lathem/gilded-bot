@@ -9,7 +9,7 @@ import { sendLogInChannel } from "../utils/logs.js";
 export default {
   name: "oxa_payout",
   description: "Send a payout via OxaPay",
-  ownerOnly: true,
+  authorizedRoleOnly: true,
   options: [
     {
       name: "address",
